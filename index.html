@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vaishnavi Tripathi | Portfolio</title>
+    <title>SK Kausik Hussain | Full Stack Developer & Systems Engineer</title>
 
     <!-- Bootstrap -->
     <link
@@ -18,9 +18,15 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=8" />
   </head>
-  <body>
+  <body class="dark-mode">
+    <!-- Interactive Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Background Effects -->
     <div class="background-blobs">
       <span class="blob blob1"></span>
@@ -31,13 +37,18 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Vaishnavi Tripathi</a>
+        <a class="navbar-brand" href="#home">
+          <span>Kausik</span>.dev
+        </a>
 
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,24 +56,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#journey">Journey</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item mt-3 mt-lg-0">
-              <button id="themeToggle" class="theme-toggle">
-                <i class="fa-solid fa-moon"></i>
+              <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-sun"></i>
               </button>
             </li>
           </ul>
@@ -77,41 +78,36 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-7">
               <div class="hero-content reveal">
-                <span class="section-tag">Frontend Developer</span>
+                <span class="section-tag">Full Stack Developer | Systems Engineer</span>
                 <h1>
                   Hi, I'm
-                  <span class="gradient-text">Vaishnavi Tripathi</span>
+                  <span class="gradient-text">SK Kausik Hussain</span>
                 </h1>
-                <h3 class="typing-text">
-                  I build beautiful, responsive & interactive websites
+                <h3 class="hero-role-heading">
+                  I build <span id="typewriter" class="gradient-text"></span><span class="typewriter-cursor">|</span>
                 </h3>
                 <p>
-                  I am passionate about creating visually appealing and
-                  user-friendly web experiences using HTML, CSS, JavaScript,
-                  Bootstrap and React. I enjoy bringing ideas to life with clean
-                  design, smooth animation and modern layout.
+                  I'm a Full Stack Developer passionate about building scalable web applications, 
+                  real-time collaborative platforms, and AI-powered systems that solve real-world problems. 
+                  From telemedicine solutions to distributed AI infrastructure, I focus on creating 
+                  meaningful engineering products with modern technologies.
                 </p>
 
                 <div class="hero-buttons">
                   <a
-                    href="./Vaishnavi Tripathi _Resume.pdf"
+                    href="./Resume.pdf"
                     class="btn main-btn"
                     download
                   >
-                    Download Resume
+                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
                   </a>
-                  <a href="#projects" class="btn outline-btn">View Projects</a>
+                  <a href="#projects" class="btn outline-btn">View Projects <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="hero-badges">
-                  <span><i class="fa-solid fa-code"></i> Clean UI</span>
-                  <span
-                    ><i class="fa-solid fa-mobile-screen"></i> Responsive</span
-                  >
-                  <span
-                    ><i class="fa-solid fa-wand-magic-sparkles"></i>
-                    Creative</span
-                  >
+                  <span><i class="fa-solid fa-bolt"></i> Real-Time Tech</span>
+                  <span><i class="fa-solid fa-brain"></i> AI Engineering</span>
+                  <span><i class="fa-solid fa-cubes"></i> Scalable Backend</span>
                 </div>
               </div>
             </div>
@@ -119,17 +115,17 @@
             <div class="col-lg-5">
               <div class="hero-image-wrap reveal tilt-card">
                 <div class="hero-image-ring">
-                  <img src="./profile.jpeg" alt="Vaishnavi Tripathi" />
+                  <img src="./profile_kausik.jpg" alt="SK Kausik Hussain" />
                 </div>
 
                 <div class="floating-card card-one">
-                  <small>Focus</small>
-                  <h6>Frontend & UI Design</h6>
+                  <small>Specialization</small>
+                  <h6>AI & Real-Time</h6>
                 </div>
 
                 <div class="floating-card card-two">
-                  <small>Status</small>
-                  <h6>Open to Opportunities</h6>
+                  <small>Accomplishment</small>
+                  <h6>SIH 2025 Finalist</h6>
                 </div>
               </div>
             </div>
@@ -139,71 +135,66 @@
         <div class="row stats-row g-4 mt-2">
           <div class="col-md-4">
             <div class="stat-card reveal tilt-card">
-              <h2>4+</h2>
-              <p>Projects designed and developed with responsive layouts.</p>
+              <h2>6+</h2>
+              <p>Full Stack Projects Developed</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="stat-card reveal tilt-card">
-              <h2>8+</h2>
-              <p>Technologies and tools explored in my learning journey.</p>
+              <h2>SIH 2025</h2>
+              <p>Smart India Hackathon Finalist</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="stat-card reveal tilt-card">
-              <h2>100%</h2>
-              <p>Dedication to learning, improving and building better UI.</p>
+              <h2>60+</h2>
+              <p>DSA Coding Problems Solved</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section class="section-space" id="about">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">About Me</span>
-          <h2>Turning ideas into elegant digital experiences</h2>
+          <h2>Turning complex requirements into elegant code</h2>
           <p>
-            I am a frontend developer who enjoys combining design and code to
-            create polished web interfaces. I love experimenting with layouts,
-            animation, UI styling and modern development techniques.
+            I'm a Computer Science undergraduate and full stack developer focused on building high-impact software products. 
+            My interests lie at the intersection of scalable backend systems, real-time collaboration, AI-powered applications, 
+            and modern web engineering.
           </p>
         </div>
 
         <div class="row g-4">
           <div class="col-md-4">
             <div class="info-card reveal tilt-card">
-              <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
-              <h4>Creative Design</h4>
+              <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Real-Time Systems</h4>
               <p>
-                I focus on attractive design, balanced layouts and modern
-                presentation that feels unique and engaging.
+                Building low-latency collaborative applications using WebSockets, WebRTC, and scalable backend architectures.
               </p>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="info-card reveal tilt-card">
-              <div class="icon-box">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <h4>Frontend Development</h4>
+              <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+              <h4>Full Stack Engineering</h4>
               <p>
-                I build responsive and interactive websites with a clean
-                structure and user-friendly experience.
+                Designing end-to-end products with React, Next.js, TypeScript, Node.js, and robust API-driven systems.
               </p>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="info-card reveal tilt-card">
-              <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
-              <h4>Continuous Growth</h4>
+              <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+              <h4>AI Product Development</h4>
               <p>
-                I keep learning and improving with every project, always trying
-                to level up my skills and design quality.
+                Integrating AI capabilities into practical applications including healthcare, automation, and intelligent workflows.
               </p>
             </div>
           </div>
@@ -211,129 +202,310 @@
       </div>
     </section>
 
-    <!-- Featured Projects -->
+    <!-- Featured Projects Section -->
     <section class="section-space" id="projects">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">Projects</span>
-          <h2>Featured work</h2>
+          <h2>Engineering Showcase</h2>
           <p>
-            These projects represent my practice in frontend development,
-            responsiveness, interface design and interactive user experiences.
+            Here is a selection of projects highlighting my focus on AI, real-time systems, 
+            and production-ready full-stack software development. Hover over cards to see live video previews.
           </p>
         </div>
 
-        <div class="featured-project reveal">
+        <!-- Project Category Filter Tabs -->
+        <div class="projects-filter-container reveal">
+          <button class="proj-filter-btn active" data-filter="all">All Projects</button>
+          <button class="proj-filter-btn" data-filter="ai">AI & Systems</button>
+          <button class="proj-filter-btn" data-filter="real-time">Real-Time Tech</button>
+          <button class="proj-filter-btn" data-filter="full-stack">Full-Stack Apps</button>
+        </div>
+
+        <!-- Flagship Project: JanSehat -->
+        <div class="featured-project reveal project-filter-card" data-category="ai real-time full-stack">
           <div class="row g-0 align-items-center">
             <div class="col-lg-7">
-              <div class="featured-video">
-                <video src="./playvox.mp4" controls muted loop></video>
+              <div class="featured-image-wrap">
+                <video src="gemini_generated_video_d9d7f184.mp4" poster="./jansehat.png" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="featured-content">
-                <span class="section-tag">Spotlight Project</span>
-                <h3>PlayVox Music Player</h3>
+                <span class="section-tag">Flagship Project / SIH Finalist</span>
+                <h3>JanSehat</h3>
                 <p>
-                  A stylish and modern web-based music player interface with
-                  trending songs, popular artists and a visually engaging
-                  design. This project highlights my interest in premium UI
-                  layout and clean frontend styling.
+                  An AI-powered telemedicine platform designed for low-bandwidth rural healthcare access. 
+                  Includes offline-first local cache synchronization and intelligent AI symptom assistance 
+                  to support remote diagnoses.
                 </p>
 
                 <div class="tech-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>Responsive UI</span>
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>WebRTC</span>
+                  <span>AI APIs</span>
+                  <span>IndexedDB</span>
+                  <span>Twilio</span>
                 </div>
 
                 <div class="project-btns">
                   <a
-                    href="https://github.com/Vaishnavi226/PlayVoxx"
+                    href="https://github.com/kausikhussain/Jansehat"
                     target="_blank"
                     class="btn main-btn"
-                    >GitHub</a
                   >
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
                   <a
-                    href="https://tiny-duckanoo-908c4d.netlify.app/"
+                    href="https://jansehat.vercel.app/"
                     target="_blank"
                     class="btn outline-btn"
-                    >Live Demo</a
                   >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row g-4 mt-1">
-          <div class="col-md-6 col-xl-4">
+        <!-- Projects Grid -->
+        <div class="row g-4 mt-2">
+          <!-- AI Interview Copilot -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="ai">
             <div class="project-card reveal tilt-card">
-              <video src="./weather.mp4" controls muted loop></video>
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_bd44fac4.mp4" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
               <div class="project-card-body">
-                <h4>Weather App</h4>
+                <span class="section-tag">AI / Productivity Tool</span>
+                <h4>AI Interview Copilot</h4>
                 <p>
-                  Real-time weather application with a clean interface and
-                  responsive design.
+                  AI-powered real-time desktop copilot assisting candidates with live coding suggestions, feedback loops, and interview performance metrics.
                 </p>
+                <div class="tech-tags mt-2">
+                  <span>Python</span>
+                  <span>OpenCV</span>
+                  <span>OpenAI APIs</span>
+                  <span>React</span>
+                  <span>WebSockets</span>
+                </div>
                 <div class="project-links">
-                  <a
-                    href="https://github.com/Vaishnavi226/Weather-App"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                  <a href="#">Live Demo</a>
+                  <a href="https://github.com/kausikhussain/AI-Interview-Copilot" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-xl-4">
+          <!-- Victus -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="ai">
             <div class="project-card reveal tilt-card">
-              <video src="./tictoe.mp4" controls muted loop></video>
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_a737baa5.mp4" poster="./victus.png" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
               <div class="project-card-body">
-                <h4>Chess Tic Tac Toe</h4>
+                <span class="section-tag">AI Infrastructure</span>
+                <h4>Victus</h4>
                 <p>
-                  A fun and creative twist on the classic game with a chess
-                  themed interface.
+                  Distributed AI training infrastructure enabling collaborative GPU/CPU resource sharing 
+                  for decentralized machine learning experimentation.
                 </p>
+                <div class="tech-tags mt-2">
+                  <span>React</span>
+                  <span>FastAPI</span>
+                  <span>Docker</span>
+                  <span>Redis</span>
+                  <span>PyTorch</span>
+                </div>
                 <div class="project-links">
-                  <a
-                    href="https://github.com/Vaishnavi226/Tic-tac-toe"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                  <a
-                    href="https://dashing-peony-482ea3.netlify.app/"
-                    target="_blank"
-                    >Live Demo</a
-                  >
+                  <a href="https://github.com/kausikhussain/Victus" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-xl-4">
+          <!-- TripSync -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="real-time">
             <div class="project-card reveal tilt-card">
-              <video src="./todo.mp4" controls muted loop></video>
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_cf4aff13.mp4" poster="./tripsync.png" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
               <div class="project-card-body">
-                <h4>To Do Application</h4>
+                <span class="section-tag">Real-Time Platform</span>
+                <h4>TripSync</h4>
                 <p>
-                  A simple task management application for organizing daily work
-                  with ease.
+                  Real-time collaborative trip planning platform enabling synchronized shared checklists, 
+                  live user location coordination, and instant updates.
                 </p>
+                <div class="tech-tags mt-2">
+                  <span>Next.js</span>
+                  <span>TypeScript</span>
+                  <span>Socket.IO</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                </div>
                 <div class="project-links">
-                  <a
-                    href="https://github.com/Vaishnavi226/TODO-app"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                  <a
-                    href="https://magical-pixie-799ee1.netlify.app/"
-                    target="_blank"
-                    >Live Demo</a
-                  >
+                  <a href="https://github.com/kausikhussain/TripSync" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Budget Tracking App -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="full-stack">
+            <div class="project-card reveal tilt-card">
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_98ebc4f4.mp4" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
+              <div class="project-card-body">
+                <span class="section-tag">Full Stack / Finance</span>
+                <h4>Budget Tracker</h4>
+                <p>
+                  A smart financial budget tracker with automated expense categorization, interactive dashboard metrics, and transaction history tracking.
+                </p>
+                <div class="tech-tags mt-2">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>MongoDB</span>
+                  <span>Chart.js</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kausikhussain/BudgetTracker" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uber Clone -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="full-stack">
+            <div class="project-card reveal tilt-card">
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_c752a3c3.mp4" poster="./uber_clone.png" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
+              <div class="project-card-body">
+                <span class="section-tag">Full Stack Product</span>
+                <h4>Uber Clone</h4>
+                <p>
+                  Full-stack ride-booking application simulating real-world trip lifecycles, maps routing 
+                  estimations, and backend-driven state management.
+                </p>
+                <div class="tech-tags mt-2">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>Maps API</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kausikhussain/UberClone" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Veriomex -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="ai">
+            <div class="project-card reveal tilt-card">
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_2fcbbabc.mp4" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
+              <div class="project-card-body">
+                <span class="section-tag">AI / Security</span>
+                <h4>Veriomex</h4>
+                <p>
+                  AI-driven authentication and secure verification platform with real-time biometric analysis, 
+                  face verification, and fraud detection algorithms.
+                </p>
+                <div class="tech-tags mt-2">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Python</span>
+                  <span>WebRTC</span>
+                  <span>JWT</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kausikhussain/Veriomex" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- eLearning -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="real-time full-stack">
+            <div class="project-card reveal tilt-card">
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_ab8373a2.mp4" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
+              <div class="project-card-body">
+                <span class="section-tag">Full Stack Web</span>
+                <h4>eLearning</h4>
+                <p>
+                  A modern collaborative e-learning portal offering course hosting, live lecture streams, 
+                  real-time student-teacher chats, and interactive quiz modules.
+                </p>
+                <div class="tech-tags mt-2">
+                  <span>Next.js</span>
+                  <span>Node.js</span>
+                  <span>WebRTC</span>
+                  <span>MongoDB</span>
+                  <span>Socket.IO</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kausikhussain/eLearning" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ERP -->
+          <div class="col-md-6 col-xl-4 project-filter-card" data-category="full-stack">
+            <div class="project-card reveal tilt-card">
+              <div class="project-card-image">
+                <video src="./gemini_generated_video_1a76505e.mp4" preload="auto" loop muted playsinline class="project-video"></video>
+                <div class="video-badge"><i class="fa-solid fa-play"></i> Hover to Preview</div>
+              </div>
+              <div class="project-card-body">
+                <span class="section-tag">Business Automation</span>
+                <h4>ERP System</h4>
+                <p>
+                  Enterprise resource planning system optimizing business automation workflows, inventory management, 
+                  and automated invoicing pipelines.
+                </p>
+                <div class="tech-tags mt-2">
+                  <span>React</span>
+                  <span>FastAPI</span>
+                  <span>SQL</span>
+                  <span>Docker</span>
+                  <span>Redis</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/kausikhussain/ERP-Automation" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
                 </div>
               </div>
             </div>
@@ -342,66 +514,128 @@
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills Section -->
     <section class="section-space" id="skills">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">Skills</span>
-          <h2>Tech stack and tools</h2>
+          <h2>Tech Stack & Toolkit</h2>
           <p>
-            These technologies reflect my practical experience and ongoing
-            learning in web development.
+            Languages, frameworks, systems, and tools I use to bring production software to life.
           </p>
         </div>
 
+        <!-- Interactive Filter Tabs -->
+        <div class="skills-filter-container reveal">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & Systems</button>
+          <button class="filter-btn" data-filter="database-ai">Database, AI & Tools</button>
+        </div>
+
         <div class="skills-box reveal">
+          <!-- Category: Frontend -->
+          <h5 class="skills-category-title category-group">Frontend Engineering</h5>
           <div class="skills-grid">
-            <div class="skill-card tilt-card">
-              <img src="./HTML.png" alt="HTML" />
-              <h6>HTML</h6>
-            </div>
-            <div class="skill-card tilt-card">
-              <img src="./CSS.png" alt="CSS" />
-              <h6>CSS</h6>
-            </div>
-            <div class="skill-card tilt-card">
-              <img src="./JS.png" alt="JavaScript" />
-              <h6>JavaScript</h6>
-            </div>
-            <div class="skill-card tilt-card">
-              <img src="./bootstrap.png" alt="Bootstrap" />
-              <h6>Bootstrap</h6>
-            </div>
-            <div class="skill-card tilt-card">
-              <img src="./REACT.png" alt="React" />
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-brands fa-react"></i>
               <h6>React</h6>
             </div>
-            <div class="skill-card tilt-card">
-              <img src="./JAVA.png" alt="Java" />
-              <h6>Java</h6>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-solid fa-cubes"></i>
+              <h6>Next.js</h6>
             </div>
-            <div class="skill-card tilt-card">
-              <img src="./SQL.png" alt="SQL" />
-              <h6>SQL</h6>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-solid fa-code"></i>
+              <h6>TypeScript</h6>
             </div>
-            <div class="skill-card tilt-card">
-              <img src="./GIT.png" alt="Git" />
-              <h6>Git</h6>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-brands fa-js"></i>
+              <h6>JavaScript</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-brands fa-html5"></i>
+              <h6>HTML5</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h6>CSS3</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="frontend">
+              <i class="fa-solid fa-palette"></i>
+              <h6>Tailwind CSS</h6>
+            </div>
+          </div>
+
+          <!-- Category: Backend -->
+          <h5 class="skills-category-title category-group mt-4">Backend & Systems</h5>
+          <div class="skills-grid">
+            <div class="skill-card tilt-card" data-category="backend">
+              <i class="fa-brands fa-node-js"></i>
+              <h6>Node.js</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="backend">
+              <i class="fa-solid fa-server"></i>
+              <h6>Express.js</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="backend">
+              <i class="fa-solid fa-bolt"></i>
+              <h6>FastAPI</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="backend">
+              <i class="fa-solid fa-link"></i>
+              <h6>REST APIs</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="backend">
+              <i class="fa-solid fa-key"></i>
+              <h6>JWT Auth</h6>
+            </div>
+          </div>
+
+          <!-- Category: Database & AI -->
+          <h5 class="skills-category-title category-group mt-4">Database, AI, & Infrastructure</h5>
+          <div class="skills-grid">
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-database"></i>
+              <h6>MongoDB</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-network-wired"></i>
+              <h6>Redis</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-robot"></i>
+              <h6>OpenAI APIs</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-brain"></i>
+              <h6>PyTorch / ML</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-gear"></i>
+              <h6>Docker</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-circle-nodes"></i>
+              <h6>Socket.IO</h6>
+            </div>
+            <div class="skill-card tilt-card" data-category="database-ai">
+              <i class="fa-solid fa-video"></i>
+              <h6>WebRTC</h6>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Journey -->
+    <!-- Journey Section -->
     <section class="section-space" id="journey">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">Journey</span>
-          <h2>My development path</h2>
+          <h2>Education & Development Path</h2>
           <p>
-            Every project has helped me grow stronger in frontend development,
-            design sense and coding confidence.
+            My learning, growth, and achievements over the years.
           </p>
         </div>
 
@@ -409,90 +643,94 @@
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h4>Started web development</h4>
-              <p>
-                Began learning HTML, CSS and JavaScript and discovered my
-                interest in creating websites.
-              </p>
+              <span class="timeline-date">2023 - Present</span>
+              <h4>B.Tech in Computer Science</h4>
+              <p>Silicon Institute of Technology</p>
+              <p>Acquiring core knowledge of algorithms, database systems, and software engineering. Current GPA: 8.8.</p>
             </div>
           </div>
 
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h4>Built practical projects</h4>
-              <p>
-                Created weather app, to-do app, music player and game projects
-                to strengthen my frontend fundamentals.
-              </p>
+              <span class="timeline-date">2024</span>
+              <h4>Expanding Full Stack Capabilities</h4>
+              <p>Developed multiple projects ranging from utility web tools to responsive frontend interfaces. Mastered core frontend structures and JS design patterns.</p>
             </div>
           </div>
 
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h4>Expanded my toolkit</h4>
-              <p>
-                Started learning Bootstrap, React, Java, SQL and Git to build a
-                stronger technical base.
-              </p>
+              <span class="timeline-date">2025</span>
+              <h4>Smart India Hackathon Finalist</h4>
+              <p>Participated in SIH 2025 with JanSehat, designing an offline-first and AI-telemedicine application. Deployed real-time Socket.IO and WebRTC tools.</p>
             </div>
           </div>
 
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h4>Still improving</h4>
-              <p>
-                Currently focusing on modern UI, smoother interactions, stronger
-                design hierarchy and better project presentation.
-              </p>
+              <span class="timeline-date">2026</span>
+              <h4>AI and Distributed Systems</h4>
+              <p>Focusing on collaborative distributed computation nodes (Victus), AI infrastructure, and production deployments on cloud platforms.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section class="section-space" id="contact">
       <div class="container">
         <div class="contact-box reveal">
           <span class="section-tag">Contact</span>
           <h2>Let's build something meaningful together</h2>
           <p>
-            I am always excited to connect, collaborate and explore new
-            opportunities where I can learn and contribute.
+            I am always excited to connect, collaborate on open source projects, 
+            and explore new career opportunities in Software Engineering.
           </p>
 
           <div class="contact-actions">
-            <a href="./contactme.html" class="btn main-btn">Contact Me</a>
+            <a href="contact.html" class="btn main-btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
             <a
-              href="https://github.com/Vaishnavi226"
+              href="https://github.com/kausikhussain"
               target="_blank"
               class="btn outline-btn"
-              >GitHub Profile</a
             >
+              <i class="fa-brands fa-github"></i> GitHub Profile
+            </a>
           </div>
 
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/vaishnavi226/" target="_blank"
+            <a href="https://linkedin.com/in/skkausik" target="_blank" aria-label="LinkedIn"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
-            <a href="https://github.com/Vaishnavi226" target="_blank"
+            <a href="https://github.com/kausikhussain" target="_blank" aria-label="GitHub"
               ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="mailto:kausik1027@gmail.com" aria-label="Email"
+              ><i class="fa-solid fa-envelope"></i
             ></a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container text-center">
-        <p>© 2026 Vaishnavi Tripathi | Designed with creativity and code.</p>
+        <p>© 2026 SK Kausik Hussain | Designed with creativity and code.</p>
       </div>
     </footer>
 
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js?v=8"></script>
   </body>
 </html>
